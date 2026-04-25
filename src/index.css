@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-blue: #00FFFF;
+  --color-neon-pink: #FF00FF;
+  --color-bg-dark: #050505;
+  --color-card-dark: #0D0D0D;
+  --color-border-dark: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-white font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .neon-blue-shadow {
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.4));
+  }
+  .neon-pink-shadow {
+    filter: drop-shadow(0 0 8px rgba(255, 0, 255, 0.4));
+  }
+  .grid-pattern {
+    background-image: radial-gradient(circle at 2px 2px, #1A1A1A 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+}
